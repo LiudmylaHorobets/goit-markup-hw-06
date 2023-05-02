@@ -126,7 +126,6 @@
                 name="user_email"
                 id="user_email"
                 required
-                pattern="^(?=.*[a-z])(?=.*[A-Z])"
               />
               <svg class="modal-form-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-email"></use>
@@ -134,25 +133,38 @@
             </div>
 
             <label class="modal-form-label" for="user_comment">Comment</label>
-            <textarea class="modal-form-comment" name="user_comment" rows="5" placeholder="Text input">
-            </textarea>
+            <textarea
+              class="modal-form-comment"
+              name="user_comment"
+              placeholder="Text input"
+            ></textarea>
 
-            <label class="modal-form-label" for="privacy_policy">
-              <div modal-form-field>
-                <input
-                  class="modal-form-input"
-                  type="checkbox"
-                  name="privacy_policy"
-                  id="privacy_policy"
-                />
-                <span>
-                  I accept the terms and conditions of the
-                  <a href="">Privacy Policy</a>
-                </span>
-              </div>
+            <label class="modal-form-agreement" for="privacy_policy">
+              <input
+                class="modal-form-agreement-box"
+                type="checkbox"
+                name="privacy_policy"
+                id="privacy_policy"
+              />
+              <svg class="modal-form-agreement-icon" width="16" height="16">
+                <use
+                  class="modal-form-agreement-icon-unchecked"
+                  href="./images/icons.svg#icon-unchecked"
+                ></use>
+                <use
+                  class="modal-form-agreement-icon-checked"
+                  href="./images/icons.svg#icon-checked"
+                ></use>
+              </svg>
+              <span class="modal-form-agreement-text">
+                I accept the terms and conditions of the
+                <a class="modal-form-agreement-link" href="">Privacy Policy</a>
+              </span>
             </label>
 
-            <button type="submit">Send</button>
+            <button class="modal-submit-btn btn btn-dark" type="submit">
+              Send
+            </button>
           </form>
         </div>
       </div>
