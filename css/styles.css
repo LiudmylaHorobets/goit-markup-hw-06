@@ -272,7 +272,6 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   padding: 24px;
   transform: translate(-50%, -50%) rotate(0) scale(1);
   opacity: 1;
@@ -296,6 +295,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-left: auto;
+  margin-bottom: 24px;
 
   width: 24px;
   height: 24px;
@@ -320,6 +320,77 @@ body {
   background-color: var(--ocean-text-cl);
   color: var(--white-text-cl);
 }
+/* Modal form */
+.modal-form {
+}
+.modal-form-title {
+  display: block;
+  text-align: center;
+  margin-bottom: 16px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  color: var(--navy-blue-text-cl);
+}
+.modal-form-label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate-text-cl);
+}
+.modal-form-field {
+  position: relative;
+  margin-bottom: 8px;
+}
+.modal-form-input {
+  padding: 0 38px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--navy-blue-text-cl);
+  border-radius: 4px;
+
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+}
+.modal-form-input:focus,
+.modal-form-comment:focus {
+  outline-color: var(--iris-text-cl);
+}
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  transform: translateY(-50%) translateX(16px);
+
+  transition: var(--anim-fast);
+
+  pointer-events: none;
+}
+.modal-form-input:focus + .modal-form-icon {
+  fill: var(--iris-text-cl);
+}
+.modal-form-comment {
+  display: block;
+  width: 100%;
+  min-height: 120px;
+  
+  border: 1px solid var(--navy-blue-text-cl);
+  border-radius: 4px;
+
+  outline: 1px solid transparent;
+  outline-offset: -1px;
+
+  resize: none;
+}
+
 
 /* Main */
 /* Features section 1 */
@@ -510,7 +581,7 @@ body {
   width: 264px;
   font-weight: 400;
 }
-.footer-socials-title {
+.footer-title {
   color: var(--white-text-cl);
   font-weight: 500;
   font-size: 16px;
@@ -541,6 +612,10 @@ body {
   background-color: var(--green-text-cl);
 }
 
+.subscribe-wrapper {
+  display: flex;
+  gap: 24px;
+}
 /* Portfolio */
 .page-portfolio {
   padding-top: 96px;
