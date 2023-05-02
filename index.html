@@ -656,12 +656,25 @@
         <section class="foter-subscribe container">
           <p class="footer-title">Subscribe</p>
           <form class="footer-form" name="subscribe-form">
-            <div class="subscribe-wrapper">
-              <label class="">
-                <span>E-mail</span>
-                <input type="text" name="subscribe-email" required />
+            <div class="subscribe-form-wrapper">
+              <label class="subscribe-form-label">
+                <input
+                  class="subscribe-form-input"
+                  type="text"
+                  name="subscribe-email"
+                  placeholder="E-mail"
+                  required
+                />
               </label>
-              <button class="btn btn-dark" type="submit">Subscribe</button>
+              <button class="subscribe-form-btn" type="submit">
+                Subscribe
+                <svg class="subscribe-form-icon" width="24" height="24">
+                  <use
+                    class="subscribe-form-icon-unchecked"
+                    href="./images/icons.svg#icon-subscribe"
+                  ></use>
+                </svg>
+              </button>
             </div>
           </form>
         </section>
